@@ -8,8 +8,8 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/xyc0.png">
+  <link rel="icon" href="/img/xyc0.png">
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
@@ -19,24 +19,26 @@
   <meta name="author" content="Xie YingCheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="官方文档： 1https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;    1. 需要使用的技术1.1 Git简单来说就是一个分布式的版本控制系统，它可以帮你记录每一次文件的改动，并且可以让同事协同编辑。我们可以方便快捷的查看历史版本。 1.2 GithubGithub是软件项目的托管平台。 1.2 Hexo它是基于node.js的静态博客网站生成器，作者是来自台湾的Tommy Chen，它可以简">
+    <meta name="description" content="本文简单讲解一下使用HEXO部署博客，使用Github的Pages发布。并讲解使用Fuild主题美化博客。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xie YingCheng的个人博客">
-<meta property="og:url" content="https://xie-yingcheng.github.io/2025/08/28/Git+Hexo+Gitee%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="使用Hexo搭建博客">
+<meta property="og:url" content="https://xie-yingcheng.github.io/2025/08/27/hexo/index.html">
 <meta property="og:site_name" content="Xie YingCheng的个人博客">
-<meta property="og:description" content="官方文档： 1https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;    1. 需要使用的技术1.1 Git简单来说就是一个分布式的版本控制系统，它可以帮你记录每一次文件的改动，并且可以让同事协同编辑。我们可以方便快捷的查看历史版本。 1.2 GithubGithub是软件项目的托管平台。 1.2 Hexo它是基于node.js的静态博客网站生成器，作者是来自台湾的Tommy Chen，它可以简">
+<meta property="og:description" content="本文简单讲解一下使用HEXO部署博客，使用Github的Pages发布。并讲解使用Fuild主题美化博客。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xie-yingcheng.github.io/images/SSH%E8%B7%AF%E5%BE%84.png">
-<meta property="og:image" content="https://xie-yingcheng.github.io/Users/xycmacmini/Documents/markdown/blog/images/image-20250828165835633.png">
-<meta property="article:published_time" content="2025-08-28T04:51:21.569Z">
-<meta property="article:modified_time" content="2025-08-28T13:35:55.528Z">
+<meta property="og:image" content="https://xie-yingcheng.github.io/.io//SSH%E8%B7%AF%E5%BE%84.png">
+<meta property="article:published_time" content="2025-08-27T02:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-28T18:04:51.780Z">
 <meta property="article:author" content="Xie YingCheng">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Fluid">
+<meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xie-yingcheng.github.io/images/SSH%E8%B7%AF%E5%BE%84.png">
+<meta name="twitter:image" content="https://xie-yingcheng.github.io/.io//SSH%E8%B7%AF%E5%BE%84.png">
   
   
   
-  <title>Xie YingCheng的个人博客</title>
+  <title>使用Hexo搭建博客 - Xie YingCheng的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -74,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"xie-yingcheng.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"xie-yingcheng.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -96,11 +98,11 @@
   <header>
     
 
-<div class="header-inner" style="height: 70vh;">
+<div class="header-inner" style="height: 24vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Xie YingCheng</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -196,13 +198,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/sun.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle">使用Hexo搭建博客</span>
           
         </div>
 
@@ -213,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-28 12:51" pubdate>
-          2025年8月28日 下午
+        <time datetime="2025-08-27 10:00" pubdate>
+          2025年8月27日 上午
         </time>
       </span>
     
@@ -225,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.6k 字
         
       </span>
     
@@ -236,7 +238,7 @@
         
         
         
-          13 分钟
+          14 分钟
         
       </span>
     
@@ -273,12 +275,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">使用Hexo搭建博客</h1>
             
             
               <div class="markdown-body">
                 
-                <p>官方文档：</p>
+                <!-- more -->
+
+
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">tags:</span> <br>    <span class="hljs-bullet">-</span> <span class="hljs-string">Hexo</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">Fluid</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">博客</span><br><span class="hljs-attr">categories:</span> <br>    <span class="hljs-bullet">-</span> <span class="hljs-string">博客搭建</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2025</span><span class="hljs-string">/8/27</span> <span class="hljs-number">10</span><span class="hljs-string">:00:00</span><br><span class="hljs-attr">excerpt:</span> <span class="hljs-string">这是摘要</span><br><span class="hljs-comment"># 该文章归档写法目前不能出现在文章信息中，暂时不清楚原因</span><br><span class="hljs-attr">archive:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
+<p>官方文档：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs url">https://hexo.io/zh-cn/docs/<br></code></pre></td></tr></table></figure>
 
 
@@ -399,7 +407,7 @@
 
 
 <h2 id="3-5-配置博客项目上传路径"><a href="#3-5-配置博客项目上传路径" class="headerlink" title="3.5 配置博客项目上传路径"></a>3.5 配置博客项目上传路径</h2><p>（1）在 GitHub 上的博客仓库中获取 <code>SSH</code> 连接路径</p>
-<p><img src="/images/SSH%E8%B7%AF%E5%BE%84.png" srcset="/img/loading.gif" lazyload alt="SSH路径"></p>
+<p><img src="/.io//SSH%E8%B7%AF%E5%BE%84.png" srcset="/img/loading.gif" lazyload alt="SSH路径"></p>
 <p>（2）在myblog博客项目配置文件 <code>_config.yml</code> 中添加SSH地址</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">&#x27;git&#x27;</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:Xie-YingCheng/Xie-YingCheng.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
 
@@ -407,7 +415,6 @@
 <p><code>type: &#39;git&#39;</code> 是 hexo 3.0 之后的写法，hexo 3.0 之前的写法是：<code>type: &#39;github&#39;</code> 。</p>
 <p><code>branch: master</code> 分支是 master，在 GitHub 的仓库 → Settings → Pages → Branch 也要改为 master。</p>
 </blockquote>
-<p><img src="/Users/xycmacmini/Documents/markdown/blog/images/image-20250828165835633.png" srcset="/img/loading.gif" lazyload alt="image-20250828165835633"></p>
 <h2 id="3-6-上传博客"><a href="#3-6-上传博客" class="headerlink" title="3.6 上传博客"></a>3.6 上传博客</h2><p>（1）安装Hexo的上传部署插件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-deployer-git<br></code></pre></td></tr></table></figure>
 
@@ -416,13 +423,25 @@
 
 
 
-<h2 id="3-7-其他配置"><a href="#3-7-其他配置" class="headerlink" title="3.7 其他配置"></a>3.7 其他配置</h2><p>（1）开启</p>
+
+
 <h1 id="4-博客页面美化"><a href="#4-博客页面美化" class="headerlink" title="4. 博客页面美化"></a>4. 博客页面美化</h1><p>下载使用Fuild主题：（下载压缩包）</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/fluid-dev/</span>hexo-theme-fluid<br></code></pre></td></tr></table></figure>
 
+<p>官方文档：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs url">https://hexo.fluid-dev.com/docs/<br></code></pre></td></tr></table></figure>
 
 
 
+<h2 id="文章摘要的两种写法"><a href="#文章摘要的两种写法" class="headerlink" title="文章摘要的两种写法"></a>文章摘要的两种写法</h2><p>（1）文章头部信息中</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">excerpt:</span> <span class="hljs-string">这是摘要</span><br></code></pre></td></tr></table></figure>
+
+<p>（2）在文章<code>&lt;!-- more -→</code>之前的内容</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br><span class="hljs-section">文章信息的yaml写法</span><br><span class="hljs-section">---</span><br><br>此处的信息也会在摘要中显示，文章头部信息的yaml中配置的excerpt优先。<br><br>&lt;!-- more --&gt;<br><br>文章内容<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="文章图片处理"><a href="#文章图片处理" class="headerlink" title="文章图片处理"></a>文章图片处理</h2>
                 
               </div>
             
@@ -430,6 +449,38 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="category-chain-item">博客搭建</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/tags/Fluid/" class="print-no-link">#Fluid</a>
+      
+        <a href="/tags/%E5%8D%9A%E5%AE%A2/" class="print-no-link">#博客</a>
+      
+    </div>
   
 </div>
 
@@ -439,8 +490,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>https://xie-yingcheng.github.io/2025/08/28/Git+Hexo+Gitee搭建博客/</div>
+      <div>使用Hexo搭建博客</div>
+      <div>https://xie-yingcheng.github.io/2025/08/27/hexo/</div>
     </div>
     <div class="license-meta">
       
@@ -452,7 +503,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月28日</div>
+          <div>2025年8月27日</div>
         </div>
       
       
@@ -614,21 +665,6 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
 
 
 
