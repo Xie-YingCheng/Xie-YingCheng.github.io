@@ -26,15 +26,15 @@
 <meta property="og:site_name" content="Xie YingCheng的个人博客">
 <meta property="og:description" content="本文简单讲解一下使用HEXO部署博客，使用Github的Pages发布。并讲解使用Fuild主题美化博客。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xie-yingcheng.github.io/.io//SSH%E8%B7%AF%E5%BE%84.png">
+<meta property="og:image" content="https://xie-yingcheng.github.io/2025/08/27/hexo/SSH%E8%B7%AF%E5%BE%84.png">
 <meta property="article:published_time" content="2025-08-27T02:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-28T18:04:51.780Z">
+<meta property="article:modified_time" content="2025-08-28T18:57:25.248Z">
 <meta property="article:author" content="Xie YingCheng">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Fluid">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xie-yingcheng.github.io/.io//SSH%E8%B7%AF%E5%BE%84.png">
+<meta name="twitter:image" content="https://xie-yingcheng.github.io/2025/08/27/hexo/SSH%E8%B7%AF%E5%BE%84.png">
   
   
   
@@ -227,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.7k 字
         
       </span>
     
@@ -238,7 +238,7 @@
         
         
         
-          14 分钟
+          15 分钟
         
       </span>
     
@@ -407,7 +407,7 @@
 
 
 <h2 id="3-5-配置博客项目上传路径"><a href="#3-5-配置博客项目上传路径" class="headerlink" title="3.5 配置博客项目上传路径"></a>3.5 配置博客项目上传路径</h2><p>（1）在 GitHub 上的博客仓库中获取 <code>SSH</code> 连接路径</p>
-<p><img src="/.io//SSH%E8%B7%AF%E5%BE%84.png" srcset="/img/loading.gif" lazyload alt="SSH路径"></p>
+<p><img src="/2025/08/27/hexo/SSH%E8%B7%AF%E5%BE%84.png" srcset="/img/loading.gif" lazyload alt="SSH路径"></p>
 <p>（2）在myblog博客项目配置文件 <code>_config.yml</code> 中添加SSH地址</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">&#x27;git&#x27;</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:Xie-YingCheng/Xie-YingCheng.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
 
@@ -419,7 +419,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-deployer-git<br></code></pre></td></tr></table></figure>
 
 <p>（2）上传博客</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 清除之前生成的一些静态资源，注意是claen，不是clear</span><br>hexo clean<br><span class="hljs-comment"># 重新生成</span><br>hexo g<br><span class="hljs-comment"># 上传、部署博客</span><br>hexo d<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 清除之前生成的一些静态资源，注意是claen，不是clear</span><br>hexo clean<br><span class="hljs-comment"># 重新生成</span><br>hexo g<br><span class="hljs-comment"># 上传、部署博客</span><br>hexo d<br><span class="hljs-comment"># 综合写法</span><br>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure>
 
 
 
@@ -441,7 +441,25 @@
 
 
 
-<h2 id="文章图片处理"><a href="#文章图片处理" class="headerlink" title="文章图片处理"></a>文章图片处理</h2>
+<h2 id="文章图片处理"><a href="#文章图片处理" class="headerlink" title="文章图片处理"></a>文章图片处理</h2><p>（1）建议md文章的结构：</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nix">~<span class="hljs-operator">/</span>MyHexoBlog<span class="hljs-operator">/</span>source<span class="hljs-operator">/</span>_posts<span class="hljs-symbol">/</span><br>├── test.md<br>├── test<span class="hljs-symbol">/</span>          <span class="hljs-comment"># 存放test.md的图片</span><br>├── github.md<br>└── github<span class="hljs-symbol">/</span>        <span class="hljs-comment"># 存放github.md的图片</span><br></code></pre></td></tr></table></figure>
+
+<p>（2）安装插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install https://github.com/CodeFalling/hexo-asset-image --save<br></code></pre></td></tr></table></figure>
+
+<p>（3）<code>_config.yml</code> 修改配置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
+<p>（4）更新上传博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
                 
               </div>
             
