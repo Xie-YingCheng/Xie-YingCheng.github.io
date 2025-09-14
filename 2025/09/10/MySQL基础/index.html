@@ -19,23 +19,21 @@
   <meta name="author" content="Xie YingCheng">
   <meta name="keywords" content="">
   
-    <meta name="description" content="记录Mac上安装的软件，方便在不使用时卸载。">
+    <meta name="description" content="1. 基础知识1.1 基础知识（1）MySQL的安装：略，参考Docker安装。 （2）完全限定的表名与列名：在不同表中存在名字相同的列名、在不同的库中存在名字相同的表名，此时，可以使用完全限定的表名和列名。 库名.表名 ;  -- 完全限定的表名 表名.列名 ;  -- 完全限定的列名  1.2 MySQL注释（1）单行注释：SQL标准 -- 注释内容（SQL标准）  （2）单行注释：MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac mini M4的安装操作记录">
-<meta property="og:url" content="https://xie-yingcheng.github.io/2025/08/29/mac/index.html">
+<meta property="og:title" content="Xie YingCheng的个人博客">
+<meta property="og:url" content="https://xie-yingcheng.github.io/2025/09/10/MySQL%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Xie YingCheng的个人博客">
-<meta property="og:description" content="记录Mac上安装的软件，方便在不使用时卸载。">
+<meta property="og:description" content="1. 基础知识1.1 基础知识（1）MySQL的安装：略，参考Docker安装。 （2）完全限定的表名与列名：在不同表中存在名字相同的列名、在不同的库中存在名字相同的表名，此时，可以使用完全限定的表名和列名。 库名.表名 ;  -- 完全限定的表名 表名.列名 ;  -- 完全限定的列名  1.2 MySQL注释（1）单行注释：SQL标准 -- 注释内容（SQL标准）  （2）单行注释：MySQL">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-29T10:55:00.000Z">
-<meta property="article:modified_time" content="2025-09-01T11:58:15.499Z">
+<meta property="article:published_time" content="2025-09-09T19:09:56.018Z">
+<meta property="article:modified_time" content="2025-09-10T12:44:18.312Z">
 <meta property="article:author" content="Xie YingCheng">
-<meta property="article:tag" content="Mac">
-<meta property="article:tag" content="软件安装">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Mac mini M4的安装操作记录 - Xie YingCheng的个人博客</title>
+  <title>Xie YingCheng的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Mac mini M4的安装操作记录</span>
+            <span id="subtitle"></span>
           
         </div>
 
@@ -212,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-29 18:55" pubdate>
-          2025年8月29日 晚上
+        <time datetime="2025-09-10 03:09" pubdate>
+          2025年9月10日 凌晨
         </time>
       </span>
     
@@ -224,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          97 字
+          714 字
         
       </span>
     
@@ -235,7 +233,7 @@
         
         
         
-          1 分钟
+          6 分钟
         
       </span>
     
@@ -272,18 +270,82 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Mac mini M4的安装操作记录</h1>
+            <h1 id="seo-header"></h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="1-软件安装"><a href="#1-软件安装" class="headerlink" title="1. 软件安装"></a>1. 软件安装</h1><h1 id="2-其他操作"><a href="#2-其他操作" class="headerlink" title="2. 其他操作"></a>2. 其他操作</h1><h2 id="2-1-可以不用管的操作"><a href="#2-1-可以不用管的操作" class="headerlink" title="2.1 可以不用管的操作"></a>2.1 可以不用管的操作</h2><p>（1）文件夹的符号链接：直接替换整个 <code>_posts</code> 目录为符号链接</p>
-<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">ln</span> -s /Users/xycmacmini/Documents/markdown /Users/xycmacmini/Documents/myblog/source/_posts</code></pre></div>
+                <h1 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1. 基础知识"></a>1. 基础知识</h1><h2 id="1-1-基础知识"><a href="#1-1-基础知识" class="headerlink" title="1.1 基础知识"></a>1.1 基础知识</h2><p>（1）MySQL的安装：略，参考Docker安装。</p>
+<p>（2）完全限定的表名与列名：在不同表中存在名字相同的列名、在不同的库中存在名字相同的表名，此时，可以使用完全限定的表名和列名。</p>
+<div class="code-wrapper"><pre><code class="hljs sql">库名.表名 ;  <span class="hljs-comment">-- 完全限定的表名</span>
+表名.列名 ;  <span class="hljs-comment">-- 完全限定的列名</span></code></pre></div>
 
+<h2 id="1-2-MySQL注释"><a href="#1-2-MySQL注释" class="headerlink" title="1.2 MySQL注释"></a>1.2 MySQL注释</h2><p>（1）单行注释：SQL标准</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-comment">-- 注释内容（SQL标准）</span></code></pre></div>
+
+<p>（2）单行注释：MySQL支持，大部分不支持</p>
+<div class="code-wrapper"><pre><code class="hljs sql"># 注释内容（MySQL支持，大部分不支持）</code></pre></div>
+
+<p>（3）多行注释：SQL标准</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-comment">/*</span>
+<span class="hljs-comment"> * 多行注释（SQL标准）</span>
+<span class="hljs-comment"> */</span></code></pre></div>
+
+<h2 id="1-3-引号与反引号"><a href="#1-3-引号与反引号" class="headerlink" title="1.3 引号与反引号"></a>1.3 引号与反引号</h2><p>（1）MySQL的<strong>字段名</strong>、<strong>表名</strong>通常不需要加任何引号，如果非要加上引号，推荐加反引号（着重号）；</p>
+<p>（2）MySQL的列别名可以不加引号，如果加引号，单引号和双引号以及反引号都可以；</p>
+<p>（3）MySQL的<strong>表别名不可以加引号</strong>；</p>
+<p>（4）单引号和双引号都可以表示字符串(字符串一定不能使用反引号，不支持)。</p>
+<p>（5）反引号的使用：查询的字段名是关键字或者存在空格等。</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> `<span class="hljs-keyword">from</span>` <span class="hljs-keyword">FROM</span> employees ;</code></pre></div>
+
+<h2 id="1-4-MySQL命令"><a href="#1-4-MySQL命令" class="headerlink" title="1.4 MySQL命令"></a>1.4 MySQL命令</h2><p>（1）结尾：MySQL命令以<code>;</code>结尾。</p>
+<p>（2）大小写：MySQL关键字不区分大小写。大小写习惯：</p>
+<ul>
+<li><p>SQL关键字习惯大写；</p>
+</li>
+<li><p>列、表名使用小写。</p>
+</li>
+</ul>
 <blockquote>
-<p>（1）此操作类似于Windows的快捷方式</p>
-<p>（2）结果：会将 <code>_posts</code> 目录直接指向 <code>markdown</code> 目录，所有在 <code>markdown</code> 中的文件都会在 <code>_posts</code> 中实时可见。</p>
+<p>本文约定：伪代码关键字使用小写（方便英文拼写），例子关键字大写，其余小写。</p>
 </blockquote>
+<p>（3）空格：处理SQL语句时，所有的空格都会被忽略，变为一个空格。</p>
+<p>（4）行：SQL语句可以在一行，可以在多行，在多行更易读和调试，但是尽量不要在一条语句中出现空行。</p>
+<h2 id="1-5-一些基础命令"><a href="#1-5-一些基础命令" class="headerlink" title="1.5 一些基础命令"></a>1.5 一些基础命令</h2><p>（1）选择数据库：刚连接到MySQL时，没有任何数据库打开供使用，所以需要先选择一个数据库。</p>
+<div class="code-wrapper"><pre><code class="hljs sql">use 库名 ; <span class="hljs-comment">-- 没有返回结果，使用SQLyog的时候，会看到已经切换到该数据库下</span>
+USE test_sql ;</code></pre></div>
+
+<p>（2）显示当前用户的所有数据库：</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SHOW</span> DATABASES ; <span class="hljs-comment">-- 返回当前用户下一个可用数据库的列表</span></code></pre></div>
+
+<p>（3）显示当前数据库下所有的表：</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SHOW</span> TABLES ; <span class="hljs-comment">-- 返回当前数据库内可使用的表的列表</span></code></pre></div>
+
+<p>（4）查看当前库下某个表的表结构：</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">desc</span> 表名 ; <span class="hljs-comment">-- 查看表结构，方式1</span>
+<span class="hljs-keyword">show</span> columns <span class="hljs-keyword">from</span> 表名 ; <span class="hljs-comment">-- 查看表结构，方式2</span>
+<span class="hljs-keyword">show</span> index <span class="hljs-keyword">from</span> 表名 ;  <span class="hljs-comment">-- 查看表的索引（主键约束、外键约束、唯一约束）</span></code></pre></div>
+
+<p>（5）查看当前使用的是哪个数据库：</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> DATABASE() ;</code></pre></div>
+
+<p>（6）查看MySQL的版本：</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> VERSION() ;</code></pre></div>
+
+<p>（7）查看创建数据库时使用的语句：</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">show</span> <span class="hljs-keyword">create</span> database 数据库 ;
+<span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">CREATE</span> DATABASE test_sql ;</code></pre></div>
+
+<p>（8）查看创建表时使用的语句：</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">show</span> <span class="hljs-keyword">create table</span> 表名 ;
+<span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">CREATE TABLE</span> employees ;</code></pre></div>
+
+<p>（9）查看当前用户：</p>
+<div class="code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">USER</span>() ;</code></pre></div>
+
+
+
+<h2 id="1-6-用户管理"><a href="#1-6-用户管理" class="headerlink" title="1.6 用户管理"></a>1.6 用户管理</h2><p>暂时省略。</p>
 
                 
               </div>
@@ -292,36 +354,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Mac%E6%93%8D%E4%BD%9C/" class="category-chain-item">Mac操作</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Mac/" class="print-no-link">#Mac</a>
-      
-        <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="print-no-link">#软件安装</a>
-      
-    </div>
   
 </div>
 
@@ -331,8 +363,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Mac mini M4的安装操作记录</div>
-      <div>https://xie-yingcheng.github.io/2025/08/29/mac/</div>
+      <div></div>
+      <div>https://xie-yingcheng.github.io/2025/09/10/MySQL基础/</div>
     </div>
     <div class="license-meta">
       
@@ -344,7 +376,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月29日</div>
+          <div>2025年9月10日</div>
         </div>
       
       
@@ -376,9 +408,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/09/05/mybatisplus/" title="MyBatis-Plus详解">
+                      <a href="/2025/09/11/SpringSecurity/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">MyBatis-Plus详解</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -386,8 +418,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/27/hexo/" title="使用Hexo搭建博客">
-                        <span class="hidden-mobile">使用Hexo搭建博客</span>
+                      <a href="/2025/09/09/%E4%BB%A3%E7%A0%81%E9%A2%9C%E8%89%B2%E6%B5%8B%E8%AF%95/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
